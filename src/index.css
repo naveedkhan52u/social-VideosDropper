@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --surface: #111318;
+    --surface-elevated: #131722;
+    --surface-interactive: #1A2030;
+    --border-structural: #222738;
+    --primary-indigo: #6366F1;
+    --secondary-cyan: #06B6D4;
+    --tertiary-emerald: #10B981;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #0A0C10;
+    color: #e2e2e8;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.025em;
+  }
+}
+
+/* Custom scrollbar utility */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Obsidian Glassmorphism utilities */
+.obsidian-card {
+  background: rgba(19, 23, 34, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(34, 39, 56, 0.85);
+}
+
+.obsidian-card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.obsidian-card-hover:hover {
+  border-color: rgba(99, 102, 241, 0.45);
+  box-shadow: 0 0 24px -6px rgba(99, 102, 241, 0.15);
+}
+
+.obsidian-input {
+  background: rgba(26, 32, 48, 0.65);
+  border: 1px solid #222738;
+  color: #F8FAFC;
+}
+.obsidian-input:focus {
+  border-color: #6366F1;
+  box-shadow: 0 0 0 1px #6366F1, 0 0 20px -4px rgba(99, 102, 241, 0.35);
+  outline: none;
+}
+
+/* Tabular figures for telemetry & numbers */
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Shimmer animation for progress */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-shimmer {
+  animation: shimmer 1.8s infinite linear;
+}

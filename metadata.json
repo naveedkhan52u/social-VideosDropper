@@ -1,0 +1,6 @@
+{
+  "name": "OmniFetch - Obsidian Stream Downloader",
+  "description": "Fast, open, and frictionless media retrieval with zero logging, ephemeral transcode architecture, and universal multi-platform compatibility.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
